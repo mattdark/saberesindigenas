@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<title>Somos de Aquí</title>
+	<meta name="author" content="Somos de Aquí" />
+	<meta name="description" content="fullPage demo easing effect." />
+	<meta name="keywords"  content="fullpage,jquery,demo,easing,effect,jqueui" />
+	<meta name="Resource-type" content="Document" />
+
+
+	<link rel="stylesheet" type="text/css" href="./assets/css/jquery.fullPage.css" />
+	<link rel="stylesheet" href="http://www.w3schools.com/lib/w3.css">
+	<link rel="stylesheet" type="text/css" href="./assets/css/examples.css" />	
+	<link href="https://fonts.googleapis.com/css?family=Caveat+Brush|Signika:300" rel="stylesheet">
+	<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Raleway">
+
+	<!--[if IE]>
+		<script type="text/javascript">
+			 var console = { log: function() {} };
+		</script>
+	<![endif]-->
+
+	<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js"></script>
+	<script src="http://ajax.googleapis.com/ajax/libs/jqueryui/1.9.1/jquery-ui.min.js"></script>
+
+	<script type="text/javascript" src="./assets/js/vendors/scrolloverflow.js"></script>
+
+	<script type="text/javascript" src="./assets/js/jquery.fullPage.js"></script>
+	<script type="text/javascript" src="./assets/js/examples.js"></script>
+	<script type="text/javascript">
+		$(document).ready(function() {
+			$('#fullpage').fullpage({
+				sectionsColor: ['#FFFFFF', '#FFFFFF', '#FFFFFF', '#FFFFFF', '#FFFFFF', '#FFFFFF'],
+				anchors: ['firstPage', 'secondPage', '3rdPage', '4thpage', '5thpage', 'lastPage'],
+				menu: '#menu',
+
+				//equivalent to jQuery `easeOutBack` extracted from http://matthewlein.com/ceaser/
+				easingcss3: 'cubic-bezier(0.175, 0.885, 0.320, 1.275)'
+			});
+
+		});
+	</script>
+
+</head>
+<body class="w3-light-grey">
+
+<!-- Sidenav/menu -->
+<nav class="w3-sidenav w3-black w3-animate-right w3-center w3-top w3-text-light-grey w3-large" style="z-index:3;width:250px;font-weight:bold;display:none;right:0;" id="mySidenav">
+  <a href="javascript:void()" onclick="w3_close()" class="w3-padding-32">CLOSE</a> 
+  <a href="#" class="w3-padding-16">Inicio</a> 
+  <a href="#section1" class="w3-padding-16">Nosotros</a> 
+  <a href="#section2" class="w3-padding-16">Comunidades</a>
+  <a href="#section3" class="w3-padding-16">App</a> 
+  <a href="#section4" class="w3-padding-16">Equipo</a>
+  <a href="#section5" class="w3-padding-16">Contacto</a>
+</nav>
+
+<!-- Top menu on small screens -->
+<header class="w3-container w3-top w3-white w3-xlarge w3-padding-16">
+  <span class="w3-left w3-padding" id="somos">SOMOS DE AQUÍ<br><h4>Saberes Ancestrales</h4></span>
+  <a href="javascript:void(0)" class="w3-right w3-btn w3-white" onclick="w3_open()">☰</a>
+</header>
+
+<!-- Overlay effect when opening sidenav on small screens -->
+<div class="w3-overlay w3-animate-opacity" onclick="w3_close()" style="cursor:pointer" title="close side menu" id="myOverlay"></div>
+
+<div id="fullpage">
+	<div class="section " id="section0">
+		<h1>fullPage.js</h1>
+		<p>Configure the easing jQuery UI effect!</p>
+		<img src="imgs/fullPage.png" alt="fullPage" />
+	</div>
+	<div class="section" id="section1">
+		<div class="intro" id="about">
+			<h1>Nuestra historia</h1>
+			<p>Somos parte de un laboratorio de trabajo colaborativo entre comunidades indígenas y un equipo multidisciplinario de diferentes partes de Iberoamérica que tiene como finalidad elaborar un manual digital para la construcción de un modelo de calendario agro-ecológico que recupere, innove, difunda y fortalezca los saberes ancestrales de los pueblos originarios.</p>
+			<p>
+				<h2><span>Somos de aquí, somos saberes ancestrales</span></h2>
+			</p>
+			<p id="elements">
+				<span>
+					<img id="earth" alt="Somos Tierra" src="./assets/img/earth.png">
+				</span>
+				<span>
+					<img id="air" alt="Somos Aire" src="./assets/img/air.png">
+				</span>
+				<span>
+					<img id="fire" alt="Somos Fuego" src="./assets/img/fire.png">
+				</span>
+				<span>
+					<img id="water" alt="Somos Agua" src="./assets/img/water.png">
+				</span>
+			</p>
+		</div>
+	</div>
+	<div class="section" id="section2">
+		<div class="intro" id="community">
+			<div id="comunidad">
+				<h1>Comunidades</h1>
+				<p>Nuestro proyecto fue pensado para todas las comunidades locales de Latinoamérica y el Caribe (Indígenas, Comunidades Étnicas, Comunidades Campesinas). Ellas, que merecen ser vistas, reconocidas y dignificadas, pues de aquí venimos.</p>
+				<p><h2>Todos somos de aquí.</h2></p>
+			</div>
+			<div id="photo">
+				<figure>
+					<img src="./assets/photo/imagen.png">
+					<figcaption>JURUBIRÁ, CHOCÓ - COLOMBIA<br>Afrodescendiente - Comunidad Indígena - Emberá</figcaption>
+				</figure>
+			</div>
+		</div>
+	</div>
+	<div class="section" id="section4">
+		<div class="intro" id="team">
+			<h1>Conócenos</h1>
+			<p>
+				<h2><span>Somos exploradores, somos visionarios</span></h2>
+			</p>
+			<p id="profiles1">
+				<span>
+					<img src="./assets/profile/omar.jpg">
+				</span>
+				<span>
+					<img src="./assets/profile/zulma.jpg">
+				</span>
+				<span>
+					<img src="./assets/profile/mario.jpg">
+				</span>
+				<span>
+					<img src="./assets/profile/luis.jpg">
+				</span>
+			</p>
+			<p id="profiles2">
+				<span>
+					<img src="./assets/profile/vero.jpg">
+				</span>
+				<span>
+					<img src="./assets/profile/eliana.jpg">
+				</span>
+				<span>
+					<img src="./assets/profile/yermana.jpg">
+				</span>
+				<span>
+					<img src="./assets/profile/juan.jpg">
+				</span>
+			</p>
+		</div>
+	</div>
+	<div class="section" id="section5">
+		<div class="intro" id="contact">
+			<form action="https://formspree.io/somosdeaquilab@gmail.com" method="POST">
+			    <input type="text" name="name">
+			    <input type="email" name="_replyto">
+			    <input type="submit" value="Send">
+			</form> 
+		</div>
+	</div>
+</div>
+
+<script>
+// Script to open and close sidenav
+function w3_open() {
+    document.getElementById("mySidenav").style.display = "block";
+    document.getElementById("myOverlay").style.display = "block";
+}
+
+function w3_close() {
+    document.getElementById("mySidenav").style.display = "none";
+    document.getElementById("myOverlay").style.display = "none";
+}
+
+// Modal Image Gallery
+function onClick(element) {
+  document.getElementById("img01").src = element.src;
+  document.getElementById("modal01").style.display = "block";
+  var captionText = document.getElementById("caption");
+  captionText.innerHTML = element.alt;
+}
+
+</script>
+
+</body>
+</html>
